@@ -8,6 +8,5 @@ az acr task create \
     --name task-incident-response-api \
     --file acr-build-task.yaml \
     --context https://github.com/hmcts/incident-response-api.git \
-    --branch master \
     --git-access-token $GIT_PAT \
     --subscription DCD-CNP-PROD
