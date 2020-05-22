@@ -52,6 +52,7 @@ INSTALLED_APPS = [
     "rest_framework",
     "bootstrap4",
     "response.apps.ResponseConfig",
+    'health_check',
 ]
 
 MIDDLEWARE = [

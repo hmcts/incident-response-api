@@ -15,9 +15,11 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import include, path
+from django.conf.urls import url
 
 urlpatterns = [
     path('slack/', include('response.slack.urls')),
     path('core/', include('response.core.urls')),
+    url(r'^health(/liveness)?', include('health_check.urls')),
     path('', include('response.ui.urls')),
 ]
