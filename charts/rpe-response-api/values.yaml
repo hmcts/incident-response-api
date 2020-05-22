@@ -14,9 +14,10 @@ nodejs:
         key: DB_PASSWORD
   environment:
     SITE_URL: https://response.platform.hmcts.net
-    INCIDENT_BOT_NAME: incident_response
+    INCIDENT_BOT_NAME: inc_response_hmcts
     INCIDENT_CHANNEL_NAME: incidents
     INCIDENT_REPORT_CHANNEL_NAME: incidents
+    INCIDENT_BOT_ID: U013Y4HJEF8
     DB_USER: response@hmcts-incident-response
     DB_NAME: response
 job:
