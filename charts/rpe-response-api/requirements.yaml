@@ -1,0 +1,7 @@
+dependencies:
+  - name: nodejs
+    version: ~1.10.1
+    repository: '@hmctspublic'
+  - name: job
+    version: ~0.5.1
+    repository: '@hmctspublic'

@@ -1,0 +1,31 @@
+nodejs:
+  applicationPort: 8000
+  ingressHost: response-api.platform.hmcts.net
+  image: 'hmctspublic.azurecr.io/rpe/response-api:db48cb'
+  secrets: 
+    SLACK_TOKEN:
+        secretRef: response
+        key: SLACK_TOKEN
+    SLACK_SIGNING_SECRET:
+        secretRef: response
+        key: SLACK_SIGNING_SECRET
+    DB_PASSWORD:
+        secretRef: response
+        key: DB_PASSWORD
+  environment:
+    SITE_URL: https://response.platform.hmcts.net
+    INCIDENT_BOT_NAME: inc_response_hmcts
+    INCIDENT_CHANNEL_NAME: incidents
+    INCIDENT_REPORT_CHANNEL_NAME: incidents
+    INCIDENT_BOT_ID: U013Y4HJEF8
+    DB_USER: response@hmcts-incident-response
+    DB_NAME: response
+    POSTGRES: true
+    DB_HOST: hmcts-incident-response.postgres.database.azure.com
+    DB_SSL_MODE: require
+job:
+  image: hmctspublic.azurecr.io/curl:alpine-bash
+  schedule: "*/1 * * * *"
+  args:
+    - -v
+    - http://response-api-nodejs/slack/cron_minute

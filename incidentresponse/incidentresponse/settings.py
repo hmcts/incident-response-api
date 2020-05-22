@@ -187,7 +187,7 @@ if os.environ.get("POSTGRES"):
             "USER": os.getenv("DB_USER", "postgres"),
             "NAME": os.getenv("DB_NAME", "postgres"),
             "PASSWORD": os.environ.get("DB_PASSWORD"),
-            "SSLMODE": os.getenv("DB_SSL_MODE", "false"),
+            "OPTIONS": {"sslmode": os.getenv("DB_SSL_MODE", "disable")},
         }
     }
 
