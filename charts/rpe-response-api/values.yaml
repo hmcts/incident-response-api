@@ -1,7 +1,7 @@
 nodejs:
   applicationPort: 8000
   ingressHost: response-api.platform.hmcts.net
-  image: 'hmctspublic.azurecr.io/rpe/response-api:db48g1'
+  image: 'hmctspublic.azurecr.io/rpe/response-api:latest'
   secrets: 
     SLACK_TOKEN:
         secretRef: response
@@ -26,6 +26,7 @@ nodejs:
 job:
   image: hmctspublic.azurecr.io/curl:alpine-bash
   schedule: "*/1 * * * *"
+  kind: CronJob
   args:
     - -v
     - http://response-api-nodejs/slack/cron_minute
