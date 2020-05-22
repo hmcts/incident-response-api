@@ -1,5 +1,5 @@
 nodejs:
-  applicationPort: 3100
+  applicationPort: 8000
   ingressHost: response-api.platform.hmcts.net
   image: 'hmctspublic.azurecr.io/rpe/response-api:db48cb'
   secrets: 
@@ -20,6 +20,9 @@ nodejs:
     INCIDENT_BOT_ID: U013Y4HJEF8
     DB_USER: response@hmcts-incident-response
     DB_NAME: response
+    POSTGRES: true
+    DB_HOST: hmcts-incident-response.postgres.database.azure.com
+    DB_SSL_MODE: require
 job:
   image: hmctspublic.azurecr.io/curl:alpine-bash
   schedule: "*/1 * * * *"
