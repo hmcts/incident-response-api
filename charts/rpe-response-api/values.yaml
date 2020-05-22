@@ -29,4 +29,4 @@ job:
   kind: CronJob
   args:
     - -v
-    - http://response-api-nodejs/slack/cron_minute
+    - http://rpe-response-api-nodejs/slack/cron_minute
