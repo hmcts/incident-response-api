@@ -7,4 +7,4 @@ RUN pip install -r requirements.txt
 COPY incidentresponse/ /app/
 
 ENTRYPOINT ["gunicorn"]
-CMD ["incidentresponse.wsgi"]
+CMD ["--bind", "0.0.0.0:8000", "incidentresponse.wsgi"]
