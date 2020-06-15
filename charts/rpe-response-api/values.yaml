@@ -24,7 +24,7 @@ nodejs:
     DB_HOST: hmcts-incident-response.postgres.database.azure.com
     DB_SSL_MODE: require
 job:
-  image: hmctspublic.azurecr.io/curl:alpine-bash
+  image: hmctspublic.azurecr.io/curl:7.70.0
   schedule: "*/1 * * * *"
   kind: CronJob
   args:
