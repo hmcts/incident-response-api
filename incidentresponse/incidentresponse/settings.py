@@ -53,6 +53,7 @@ INSTALLED_APPS = [
     "bootstrap4",
     "response.apps.ResponseConfig",
     'health_check',
+    'customresponse.apps.CustomResponseConfig'
 ]
 
 MIDDLEWARE = [
