@@ -9,7 +9,7 @@ Django==2.2.13
 django-after-response==0.2.2
 django-bootstrap4==1.1.1
 django-health-check==3.12.1
-django-incident-response==0.4.0
+django-incident-response==0.5.1
 djangorestframework==3.11.0
 emoji-data-python==1.1.0
 gunicorn==20.0.4
