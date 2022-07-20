@@ -1,6 +1,6 @@
 dependencies:
   - name: nodejs
-    version: ~2.4.4
+    version: ~2.4.5
     repository: '@hmctspublic'
   - name: job
     version: ~0.7.3
