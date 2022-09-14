@@ -20,7 +20,6 @@ from django.conf.urls import url
 urlpatterns = [
     path('slack/', include('response.slack.urls')),
     path('core/', include('response.core.urls')),
-    url(r'^health(/liveness)?', include('health_check.urls')),
-    url(r'^health(/readiness)?', include('health_check.urls')),
+    url(r'^health(/liveness|/readiness)?', include('health_check.urls')),
     path('', include('response.ui.urls')),
 ]
