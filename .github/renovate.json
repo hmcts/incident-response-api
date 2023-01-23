@@ -1,11 +1,5 @@
 {
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
-  "helmv3": {
-    "enabled": true,
-    "commitMessageTopic": "helm chart {{depName}}",
-    "fileMatch": [
-      "(^|/)Chart\\.yaml$",
-      "(^|/)requirements\\.yaml$"
-    ]
-  }
+  "extends": ["config:base", ":dependencyDashboard"],
+  "labels": ["dependencies"]
 }
