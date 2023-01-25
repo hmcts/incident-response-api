@@ -1,6 +1,6 @@
 beautifulsoup4==4.11.1
-bleach==3.3.0
-bleach-whitelist==0.0.10
+bleach==3.3.1
+bleach-whitelist==0.0.11
 certifi==2020.4.5.1
 cffi==1.15.1
 chardet==3.0.4
@@ -11,7 +11,7 @@ django-bootstrap4==1.1.1
 django-health-check==3.12.1
 django-incident-response==0.5.1
 djangorestframework==3.11.0
-emoji-data-python==1.1.0
+emoji-data-python==1.5.0
 gunicorn==20.1.0
 idna==2.9
 jsonfield==3.1.0
@@ -19,7 +19,7 @@ markdown2==2.3.9
 munch==2.5.0
 psycopg2-binary==2.8.2
 pycparser==2.20
-python-slugify==4.0.0
+python-slugify==4.0.1
 pytz==2020.1
 requests==2.23.0
 six==1.14.0
