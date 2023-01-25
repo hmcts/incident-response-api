@@ -19,7 +19,7 @@ markdown2==2.3.9
 munch==2.5.0
 psycopg2-binary==2.8.2
 pycparser==2.20
-python-slugify==4.0.0
+python-slugify==4.0.1
 pytz==2020.1
 requests==2.23.0
 six==1.14.0
