@@ -17,7 +17,7 @@ idna==2.9
 jsonfield==3.1.0
 markdown2==2.3.9
 munch==2.5.0
-psycopg2-binary==2.8.2
+psycopg2-binary==2.9.5
 pycparser==2.20
 python-slugify==4.0.1
 pytz==2020.1
