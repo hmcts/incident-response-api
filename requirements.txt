@@ -22,7 +22,7 @@ pycparser==2.20
 python-slugify==4.0.1
 pytz==2020.1
 requests==2.23.0
-six==1.14.0
+six==1.16.0
 slackclient==1.3.2
 soupsieve==2.0.1
 sqlparse==0.3.1
