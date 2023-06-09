@@ -3,7 +3,7 @@ appVersion: "1.0"
 description: A Helm chart for response api
 name: rpe-response-api
 home: https://github.com/hmcts/incident-response-api
-version: 1.0.5
+version: 1.0.6
 dependencies:
   - name: nodejs
     version: ~2.4.6
