@@ -1,0 +1,43 @@
+name: Publish Helm chart to ACR
+
+on:
+  workflow_dispatch:
+  push:
+    branches: "master"
+    paths:
+      - 'charts/rpe-response-api/Chart.yaml'
+
+jobs:
+  main:
+    runs-on: ubuntu-20.04
+    env:
+      AZURE_CONTAINER_REGISTRY_URL: hmctspublic.azurecr.io
+      HELM_VERSION_TO_INSTALL: 3.11.1
+    steps:
+      - name: Checkout Source
+        uses: actions/checkout@v3
+
+      - name: Setup Docker Buildx
+        uses: docker/setup-buildx-action@v2
+
+      - name: Set up QEMU
+        uses: docker/setup-qemu-action@v2
+
+      - name: Install helm
+        uses: Azure/setup-helm@v1
+        with:
+          version: ${{ env.HELM_VERSION_TO_INSTALL }}
+
+      - name: Login to acr using helm
+        run: |
+          helm registry login ${{ env.AZURE_CONTAINER_REGISTRY_URL }} --username ${{ secrets.REGISTRY_USERNAME }} --password ${{ secrets.REGISTRY_PASSWORD }}
+
+      - name: Package helm chart
+        run: |
+          helm dependency build charts/rpe-response-api
+          helm package charts/rpe-response-api
+            
+      - name: Publish chart to acr
+        run: |
+          helm push $(ls *.tgz) oci://${{ env.AZURE_CONTAINER_REGISTRY_URL }}/helm/v1
+
