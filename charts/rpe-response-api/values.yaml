@@ -13,7 +13,7 @@ nodejs:
         secretRef: response
         key: DB_PASSWORD
   environment:
-    SITE_URL: https://response.platform.hmcts.net
+    SITE_URL: https://incidents.hmcts.net
     INCIDENT_BOT_NAME: inc_response_hmcts
     INCIDENT_CHANNEL_NAME: incidents
     INCIDENT_REPORT_CHANNEL_NAME: incidents
