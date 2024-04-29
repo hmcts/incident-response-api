@@ -1,11 +1,11 @@
 beautifulsoup4==4.11.1
 bleach==3.1.4
 bleach-whitelist==0.0.11
-certifi==2020.4.5.1
+certifi==2023.7.22
 cffi==1.15.1
 chardet==3.0.4
-cryptography==41.0.4
 Django==3.2.25
+cryptography==42.0.4
 django-after-response==0.2.2
 django-bootstrap4==1.1.1
 django-health-check==3.12.1
