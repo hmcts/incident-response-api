@@ -6,7 +6,7 @@ home: https://github.com/hmcts/incident-response-api
 version: 1.0.9
 dependencies:
   - name: nodejs
-    version: 3.0.0
+    version: 3.1.0
     repository: https://hmctspublic.azurecr.io/helm/v1/repo/
   - name: job
     version: 1.1.5
