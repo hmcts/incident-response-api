@@ -18,9 +18,12 @@ services:
     env_file: .env
     volumes:
       - ./:/app
+      - ../:/response
       - pypd:/app/pypd
     stdin_open: true
     tty: true
+    networks:
+      - main-internal-net
 
   cron:
     build:
@@ -33,22 +36,32 @@ services:
     tty: true
 
   db:
-    image: "postgres:11.16"
+    image: "postgres:11.2"
     container_name: postgres
     volumes:
       - postgres_data:/var/lib/postgresql/data/
+    networks:
+      - main-internal-net
 
   ngrok:
-    image: gtriggiano/ngrok-tunnel
-    container_name: ngrok
-    environment:
-      TARGET_HOST: "response"
-      TARGET_PORT: 8000
-    ports:
-      - "4040:4040"
+    image: ngrok/ngrok:latest
+    restart: unless-stopped
+    command:
+      - "start"
+      - "--all"
+      - "--config"
+      - "/etc/ngrok.yml"
+    volumes:
+      - ./.ngrok.yml:/etc/ngrok.yml
+    networks:
+      - main-internal-net
     depends_on:
       - response
 
 volumes:
   postgres_data:
   pypd:
+
+networks:
+  main-internal-net:
+    driver: bridge

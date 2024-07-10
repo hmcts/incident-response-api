@@ -9,3 +9,7 @@ requirements.lock
 .DS_Store
 .idea/
 incidentresponse/.DS_Store
+
+.venv/
+pypd/
+src/
