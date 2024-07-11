@@ -8,7 +8,7 @@ cryptography==42.0.8
 Django==2.2.9
 django-after-response==0.2.2
 django-bootstrap4==22.1
-django-health-check==3.12.1
+django-health-check==3.18.3
 djangorestframework==3.13.1
 emoji-data-python==1.5.0
 gunicorn==22.0.0
