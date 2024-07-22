@@ -10,15 +10,11 @@ Based off work done in https://github.com/monzo/response
 
 You will need a slack app to be able to test this fully.
 
-There is an app in the HMCTS Sandbox Slack tenant called `Incident - Sandbox` which you can use.
-
-You may need to be added to the tenant and granted permissions to the app. Speak to Enda Kelly to get access.
-
-If you need to create a new app to test, you can go ahead and do so in the sandbox tenant. This doesn't require approval like the main tenant does.
+Create a new app to test and configure it with the values from https://github.com/hmcts/response/blob/master/docs/slack_app_create.md.
 
 Back in your IDE, copy env-template file and rename it to .env and fill out the fields.
 
-See https://github.com/monzo/response/tree/master/demo#2-configure-the-demo-app for the values you need.
+See https://github.com/hmcts/response/tree/master/demo#2-configure-the-demo-app for the values you need.
 
 ### Running the app locally
 
