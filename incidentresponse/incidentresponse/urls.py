@@ -14,12 +14,11 @@ Including another URLconf
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
 from django.contrib import admin
-from django.urls import include, path
-from django.conf.urls import url
+from django.urls import include, path, re_path
 
 urlpatterns = [
     path('slack/', include('response.slack.urls')),
     path('core/', include('response.core.urls')),
-    url(r'^health(/liveness|/readiness)?', include('health_check.urls')),
+    re_path(r'^health(/liveness|/readiness)?$', include('health_check.urls')),
     path('', include('response.ui.urls')),
 ]
