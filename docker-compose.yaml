@@ -44,20 +44,20 @@ services:
     networks:
       - main-internal-net
 
-  ngrok:
-    image: ngrok/ngrok:latest
-    restart: unless-stopped
-    command:
-      - "start"
-      - "--all"
-      - "--config"
-      - "/etc/ngrok.yml"
-    volumes:
-      - ./.ngrok.yml:/etc/ngrok.yml
-    networks:
-      - main-internal-net
-    depends_on:
-      - response
+  # ngrok:
+  #   image: ngrok/ngrok:latest
+  #   restart: unless-stopped
+  #   command:
+  #     - "start"
+  #     - "--all"
+  #     - "--config"
+  #     - "/etc/ngrok.yml"
+  #   volumes:
+  #     - ./.ngrok.yml:/etc/ngrok.yml
+  #   networks:
+  #     - main-internal-net
+  #   depends_on:
+  #     - response
 
 volumes:
   postgres_data:
