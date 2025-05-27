@@ -12,7 +12,7 @@ django-health-check==3.18.3
 djangorestframework==3.15.2
 emoji-data-python==1.6.0
 gunicorn==23.0.0
-git+https://github.com/hmcts/response.git@untagged-a35d490a6c487b9d894f#egg=response
+git+https://github.com/hmcts/response.git@0.0.9#egg=response
 idna==3.10
 jsonfield==3.1.0
 markdown2==2.5.3
