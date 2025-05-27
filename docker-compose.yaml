@@ -1,6 +1,5 @@
-version: '3'
+version: "3"
 services:
-
   response:
     build:
       context: .
@@ -36,7 +35,7 @@ services:
     tty: true
 
   db:
-    image: "postgres:14.12"
+    image: "postgres:14.18"
     container_name: postgres
     env_file: .env
     volumes:
