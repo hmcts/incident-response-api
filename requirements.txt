@@ -1,4 +1,4 @@
-beautifulsoup4==4.12.3
+beautifulsoup4==4.14.3
 bleach==6.2.0
 bleach-allowlist>=1.0.3
 certifi==2024.12.14
