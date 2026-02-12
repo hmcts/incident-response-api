@@ -9,7 +9,7 @@ Django==5.0.14
 django-after-response==0.2.2
 django-bootstrap4==24.3
 django-health-check==3.18.3
-djangorestframework==3.15.2
+djangorestframework==3.16.1
 emoji-data-python==1.6.0
 gunicorn==23.0.0
 git+https://github.com/hmcts/response.git@0.0.9#egg=response
