@@ -5,7 +5,7 @@ certifi==2024.12.14
 cffi==1.17.1
 chardet==5.2.0
 cryptography==44.0.1
-Django==5.0.14
+Django==5.1.14
 django-after-response==0.2.2
 django-bootstrap4==24.3
 django-health-check==3.18.3
