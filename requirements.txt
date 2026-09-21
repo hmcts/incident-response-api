@@ -20,7 +20,7 @@ munch==4.0.0
 psycopg2-binary==2.9.9
 pycparser==2.22
 python-slugify==8.0.4
-pytz==2024.1
+pytz==2024.2
 requests==2.32.3
 six==1.16.0
 slack_sdk==3.35.0
