@@ -1,7 +1,7 @@
 beautifulsoup4==4.12.3
 bleach==6.2.0
 bleach-allowlist>=1.0.3
-certifi==2024.12.14
+certifi==2026.10.19
 cffi==1.17.1
 chardet==5.2.0
 cryptography==44.0.1
